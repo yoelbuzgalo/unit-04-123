@@ -36,3 +36,37 @@ def test_encrypt_letter_D_10():
     # Analyze
     assert result == expected
 
+def test_is_alphabetic_exclamation():
+    # Setup
+    letter = "!"
+    expected = False
+
+    # Invoke
+    result = caesar_cipher.is_alphabetic(letter)
+
+    # Analyze
+    assert result == expected
+
+def test_is_alphabetic_A():
+    # Setup
+    letter = "A"
+    expected = True
+
+    # Invoke
+    result = caesar_cipher.is_alphabetic(letter)
+
+    # Analyze
+    assert result == expected
+
+def test_is_alphabetic_z():
+    # Setup
+    letter = "z"
+    expected = True
+
+    # Invoke
+    result = caesar_cipher.is_alphabetic(letter)
+
+    # Analyze
+    assert result == expected
+
+

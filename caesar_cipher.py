@@ -4,6 +4,9 @@ def encrypt_letter(letter, shift):
     new_letter = chr(shifted_ascii) # Convert the new letter ascii key back to character form
     return new_letter # Return the converted letter
 
+def is_alphabetic(character):
+    return (character >= "A" and character <= "Z") or (character >= "a" and character <= "z")
+
 def main():
     '''
     Main entry of this program
