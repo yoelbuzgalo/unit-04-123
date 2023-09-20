@@ -1,0 +1,23 @@
+Shift 7
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+hijklmnopqrstuvwxyzabcdefg
+
+MELON
+tlsvu
+
+
+Python 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> ord("A")
+65  
+>>> ord("B") 
+66  
+>>> ord("C")
+67  
+>>> chr(67)
+'C' 
+>>> chr(66)
+'B'
+
+We can learn from this that we can simply shift the alphabet using numbers of the ASCII, and we can decrypt it easily too that way too

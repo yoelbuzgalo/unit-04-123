@@ -15,8 +15,8 @@ def test_absolute_difference_a_larger():
 def test_absolute_difference_b_larger():
     # Setup
     x = 10
-    y = 20
-    expected = 10
+    y = 15
+    expected = 5
 
     # Invoke
     result = practice.absolute_difference(x, y)
