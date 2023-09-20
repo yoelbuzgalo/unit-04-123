@@ -58,4 +58,15 @@ def test_is_alphabetic_A():
     # Analyze
     assert result == expected
 
+def test_encrypt_letter_nonalphabetic():
+    # Setup
+    letter = "*"
+    shift = 3
+    expected = ''
+
+    # Invoke
+    result = caesar_cipher.encrypt_letter(letter,shift)
+
+    # Analyze
+    assert result == expected
 
