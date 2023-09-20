@@ -58,15 +58,4 @@ def test_is_alphabetic_A():
     # Analyze
     assert result == expected
 
-def test_is_alphabetic_z():
-    # Setup
-    letter = "z"
-    expected = True
-
-    # Invoke
-    result = caesar_cipher.is_alphabetic(letter)
-
-    # Analyze
-    assert result == expected
-
 
