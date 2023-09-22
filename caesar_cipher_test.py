@@ -141,3 +141,15 @@ def test_encrypt_message_hello_low():
 
     # Analyze
     assert result == expected
+
+def test_encryot_message_long():
+    # Setup
+    message = "HELLOHELLO"
+    shift = 3
+    expected = "KHOORKHOOR"
+
+    # Invoke
+    result = caesar_cipher.encrypt_message(message, shift)
+
+    # Analyze
+    assert result == expected
