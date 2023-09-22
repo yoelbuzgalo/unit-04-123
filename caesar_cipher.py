@@ -21,20 +21,14 @@ def is_alphabetic(character):
 
 def encrypt_message(message, shift=3):
     ciphertext = ''
-    index = 0
-    msg_length = len(message)
-    while index < msg_length:
+    for index in range(len(message)):
         ciphertext = ciphertext + encrypt_letter(message[index], shift)
-        index += 1
     return ciphertext
 
 def decrypt_message(message, shift=3):
     plaintext = ''
-    index = 0
-    msg_length = len(message)
-    while index < msg_length:
+    for index in range(len(message)):
         plaintext = plaintext + decrypt_letter(message[index], shift)
-        index += 1
     return plaintext
 
 
