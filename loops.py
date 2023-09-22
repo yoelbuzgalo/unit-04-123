@@ -15,9 +15,24 @@ def count_up(number):
         counter += 1
     return sum
 
+def sum_of_odds():
+    sum = 0
+    while True:
+        num = int(input("Enter a number: "))
+        if num == 0:
+            # exits out of this loop if the input is 0
+            break
+        if num % 2 == 0:
+            # ignores and continues if its an even number
+            continue
+        else:
+            sum += num
+    return sum
+
 def main():
     print("Number of prints:", count_down(5))
     print("Number of prints:", count_up(5))
+    print(sum_of_odds())
 
 if __name__ == "__main__":
     main()
