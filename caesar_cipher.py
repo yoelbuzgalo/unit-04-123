@@ -28,6 +28,16 @@ def encrypt_message(message, shift):
         index += 1
     return ciphertext
 
+def decrypt_message(message, shift):
+    plaintext = ''
+    index = 0
+    msg_length = len(message)
+    while index < msg_length:
+        plaintext = plaintext + decrypt_letter(message[index], shift)
+        index += 1
+    return plaintext
+
+
 def main():
     '''
     Main entry of this program

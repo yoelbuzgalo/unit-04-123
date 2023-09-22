@@ -153,3 +153,27 @@ def test_encryot_message_long():
 
     # Analyze
     assert result == expected
+
+def test_decrypt_message_khoor():
+    # Setup
+    message = "KHOOR"
+    shift = 3
+    expected = "HELLO"
+
+    # Invoke
+    result = caesar_cipher.decrypt_message(message, shift)
+
+    # Analyze
+    assert result == expected
+
+def test_decrypt_message_khoorkhoor():
+    # Setup
+    message = "KHOORKHOOR"
+    shift = 3
+    expected = "HELLOHELLO"
+
+    # Invoke
+    result = caesar_cipher.decrypt_message(message, shift)
+
+    # Analyze
+    assert result == expected
