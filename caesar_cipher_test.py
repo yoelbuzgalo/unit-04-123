@@ -117,3 +117,27 @@ def test_decrypt_letter_nonalphabetic():
 
     # Analyze
     assert result == expected
+
+def test_encrypt_message_hello():
+    # Setup
+    message = "HELLO"
+    shift = 3
+    expected = "KHOOR"
+
+    # Invoke
+    result = caesar_cipher.encrypt_message(message, shift)
+
+    # Analyze
+    assert result == expected
+
+def test_encrypt_message_hello_low():
+    # Setup
+    message = "hello"
+    shift = 3
+    expected = ''
+
+    # Invoke
+    result = caesar_cipher.encrypt_message(message, shift)
+
+    # Analyze
+    assert result == expected

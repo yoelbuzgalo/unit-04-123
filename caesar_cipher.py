@@ -19,6 +19,17 @@ def decrypt_letter(letter, shift):
 def is_alphabetic(character):
     return (character >= "A" and character <= "Z")
 
+def encrypt_message(message, shift):
+    ciphertext = ''
+    
+    ciphertext = ciphertext + encrypt_letter(message[0], shift)
+    ciphertext = ciphertext + encrypt_letter(message[1], shift)
+    ciphertext = ciphertext + encrypt_letter(message[2], shift)
+    ciphertext = ciphertext + encrypt_letter(message[3], shift)
+    ciphertext = ciphertext + encrypt_letter(message[4], shift)
+    
+    return ciphertext
+
 def main():
     '''
     Main entry of this program
