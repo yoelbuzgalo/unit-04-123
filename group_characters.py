@@ -37,3 +37,16 @@ def group_characters(characters):
             upper_characters += characters[index] # Adds the character to upper_case variable group
     grouped_characters = digit_characters + lower_characters + upper_characters
     return grouped_characters
+
+def main():
+    '''
+    Main entry of this program
+    '''
+    while True:
+        user_string = input("Enter a string consisting of letters and digits: ")
+        if user_string == '':
+            break # Stops this loop immediately if the user enters an empty string
+        print(group_characters(user_string)) # Otherwise, it will run this function normally - calling the group_characters function first then printing the returned values
+
+if __name__ == "__main__":
+    main()
