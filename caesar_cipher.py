@@ -19,7 +19,7 @@ def decrypt_letter(letter, shift):
 def is_alphabetic(character):
     return (character >= "A" and character <= "Z")
 
-def encrypt_message(message, shift):
+def encrypt_message(message, shift=3):
     ciphertext = ''
     index = 0
     msg_length = len(message)
@@ -28,7 +28,7 @@ def encrypt_message(message, shift):
         index += 1
     return ciphertext
 
-def decrypt_message(message, shift):
+def decrypt_message(message, shift=3):
     plaintext = ''
     index = 0
     msg_length = len(message)

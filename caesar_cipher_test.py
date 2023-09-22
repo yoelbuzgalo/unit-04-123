@@ -177,3 +177,14 @@ def test_decrypt_message_khoorkhoor():
 
     # Analyze
     assert result == expected
+
+def test_decrypt_message_khoor_default():
+    # Setup
+    message = "KHOOR"
+    expected = "HELLO"
+
+    # Invoke
+    result = caesar_cipher.decrypt_message(message)
+
+    # Analyze
+    assert result == expected
