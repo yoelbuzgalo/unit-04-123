@@ -65,3 +65,36 @@ def test_is_digit_M():
 
     # Analysis
     assert result == expected
+
+def test_grouped_characters_aBWZ012basd():
+    # Setup
+    x = "aBWZ012basd"
+    expected = "012abasdBWZ"
+
+    # Invoke
+    result = group_characters.group_characters(x)
+
+    # Analysis
+    assert result == expected
+
+def test_grouped_characters_a6Bt233GqrY7():
+    # Setup
+    x = "a6Bt233GqrY7"
+    expected = "62337atqrBGY"
+
+    # Invoke
+    result = group_characters.group_characters(x)
+
+    # Analysis
+    assert result == expected
+
+def test_grouped_characters_aAaAaAaA():
+    # Setup
+    x = "aAaAaAaA"
+    expected = "aaaaAAAA"
+
+    # Invoke
+    result = group_characters.group_characters(x)
+
+    # Analysis
+    assert result == expected
