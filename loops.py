@@ -29,10 +29,21 @@ def sum_of_odds():
             sum += num
     return sum
 
+def print_range(a_range):
+    index = 0
+    while index < len(a_range):
+        print(a_range[index], end=' ')
+        index += 1
+    print()
+
 def main():
     print("Number of prints:", count_down(5))
     print("Number of prints:", count_up(5))
     print(sum_of_odds())
+    print_range(range(11))
+    print_range(range(0,21, 2))
+    print_range(range(5,16, 2))
+    print_range(range(10,-1, -1))
 
 if __name__ == "__main__":
     main()
