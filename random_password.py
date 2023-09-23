@@ -57,3 +57,67 @@ def get_random_char_from_string(string):
     # Generates a random number given a range between 0 to the max length of a string
     random_num = random.randrange(0, len(string))
     return string[random_num] # Returns the random picked number in the string
+
+def generate_random_password(uppercase_num, lowercase_num, digits_num, symbols_num):
+    '''
+    This function generates a random password string given passed parameters of how many characters of each type they want; uppercase, lowercase, digits or symbols
+    '''
+    # Stores each required number of characters in password string in a counter variable for the generator to keep track of
+    uppercase_counter = uppercase_num
+    lowercase_counter = lowercase_num
+    digits_counter = digits_num
+    symbols_counter = symbols_num
+    
+    # Initializes variable containers for generators to update and concatenate accordingly
+    password_string = ""
+
+    # A while loop to keep track of generating each type of character required by the user input
+    while uppercase_counter > 0 or lowercase_counter > 0 or digits_counter > 0 or symbols_counter > 0:
+        randomizer = random.randrange(0, 4) # Generates a random number between 0 to 3 (4 not inclusive)
+        if randomizer == 0 and uppercase_counter > 0:
+            # If 0, it'll choose a random character from uppercase
+            password_string += get_random_char_from_string(create_uppercase_letters_string())
+            uppercase_counter += -1
+        elif randomizer == 1 and lowercase_counter > 0:
+            # If 1, it'll choose a random character from lowercase
+            password_string += get_random_char_from_string(create_lowercase_letters_string())
+            lowercase_counter += -1
+        elif randomizer == 2 and digits_counter > 0:
+            # If 2, it'll choose a random character from digits
+            password_string += get_random_char_from_string(create_digits_string())
+            digits_counter += -1
+        elif randomizer == 3 and symbols_counter > 0:
+            # If 3, it'll choose a random character from symbols
+            password_string += get_random_char_from_string(create_symbols_string())
+            symbols_counter += -1
+    
+    return password_string # Once complete, itll return the password string
+
+
+def main():
+    while True:
+        user_input = input("Enter <num uppers> <num lowers> <num digits> <num symbols>: ")
+        values = user_input.split()
+        if user_input == '':
+            # If user enters an empty string, then the program will exit immediately
+            break
+        elif len(values) != 4:
+            print("You must enter exactly 4 values")
+        else:
+            uppercase_val = 0
+            lowercase_val = 0
+            digits_val = 0
+            symbols_val = 0
+            for index in range(len(values)):
+                if index == 0:
+                    uppercase_val += int(values[index])
+                elif index == 1:
+                    lowercase_val += int(values[index])
+                elif index == 2:
+                    digits_val += int(values[index])
+                elif index == 3:
+                    symbols_val += int(values[index])
+            print("Password:",generate_random_password(uppercase_val, lowercase_val, digits_val, symbols_val))
+
+if __name__ == "__main__":
+    main()
