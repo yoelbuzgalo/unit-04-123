@@ -1,3 +1,5 @@
+import random
+
 def create_ascii_range_string(start, stop):
     '''
     This function creates and returns a string consisting of consectutive characters from the start value (inclusive) up to the stop value (exclusive)
@@ -47,3 +49,11 @@ def create_symbols_string():
     # Concatate all of the symbol strings together
     symbols_string = symbols_string_1+symbols_string_2+symbols_string_3+symbols_string_4
     return symbols_string # Returns the created symbols string
+
+def get_random_char_from_string(string):
+    '''
+    This function gets a random character from a string is passed to this function
+    '''
+    # Generates a random number given a range between 0 to the max length of a string
+    random_num = random.randrange(0, len(string))
+    return string[random_num] # Returns the random picked number in the string

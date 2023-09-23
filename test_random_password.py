@@ -51,3 +51,16 @@ def test_create_symbols_string():
 
     # Analysis
     assert result == expected
+
+def test_get_random_char_from_string_abc():
+    # Setup
+    string = "abc"
+    expected_1 = "a"
+    expected_2 = "b"
+    expected_3 = "c"
+
+    # Invoke
+    result = random_password.get_random_char_from_string(string)
+
+    # Analysis
+    assert result == expected_1 or result == expected_2 or result == expected_3
