@@ -44,7 +44,7 @@ def test_create_digits_string():
 
 def test_create_symbols_string():
     # Setup
-    expected = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+    expected = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 
     # Invoke
     result = random_password.create_symbols_string()
