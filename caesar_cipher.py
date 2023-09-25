@@ -21,8 +21,8 @@ def is_alphabetic(character):
 
 def encrypt_message(message, shift=3):
     ciphertext = ''
-    for index in range(len(message)):
-        ciphertext = ciphertext + encrypt_letter(message[index], shift)
+    for letter in message:
+        ciphertext = ciphertext + encrypt_letter(letter, shift)
     return ciphertext
 
 def decrypt_message(message, shift=3):

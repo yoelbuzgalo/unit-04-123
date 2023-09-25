@@ -41,18 +41,25 @@ def print_range_for(a_range):
         print(i, end=' ')
     print()
 
+def reverse_chars(a_string):
+    reversed = ''
+    for ch in a_string:
+        reversed = ch + reversed
+    return
+
 def main():
-    print("Number of prints:", count_down(5))
-    print("Number of prints:", count_up(5))
-    print(sum_of_odds())
+    # print("Number of prints:", count_down(5))
+    # print("Number of prints:", count_up(5))
+    # print(sum_of_odds())
     # print_range(range(11))
     # print_range(range(0,21, 2))
     # print_range(range(5,16, 2))
     # print_range(range(10,-1, -1))
-    print_range_for(range(11))
-    print_range_for(range(0,21, 2))
-    print_range_for(range(5,16, 2))
-    print_range_for(range(10,-1, -1))
+    # print_range_for(range(11))
+    # print_range_for(range(0,21, 2))
+    # print_range_for(range(5,16, 2))
+    # print_range_for(range(10,-1, -1))
+    print(reverse_chars("Hello"))
 
 if __name__ == "__main__":
     main()
