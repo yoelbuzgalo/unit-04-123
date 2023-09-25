@@ -36,8 +36,12 @@ def main():
     '''
     Main entry of this program
     '''
-    input_letter = input("Enter your letter: ")
-    print(encrypt_letter(input_letter, 3))
+    # input_letter = input("Enter your letter: ")
+    # print(encrypt_letter(input_letter, 3))
+    input_string = input("Enter a string: ")
+    tokenized_string = input_string.split()
+    for token in tokenized_string:
+        print(encrypt_message(token))
 
 if __name__ == "__main__":
     main()
